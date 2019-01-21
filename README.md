@@ -1,8 +1,8 @@
-# Windows-2012-106-server-replication
-In this tutorial, i have built two Windows 2012 R2 servers using a pair of old Dell Optiplex 580’s (AMD Phenom CPU, upgraded to 8GB RAM each), and a single 8 port Netgear GB switch.
+# Windows-2012-2016-2019-server-replication
+In this tutorial, i have built two Windows 2016 servers using a pair of Supermicro Server (2xXeon CPU's and 128 GB RAM in both), and a single 24 port Netgear 10 GB switch. I have also tested same by connecting both server through a CAT 7 cable over 10 Gbps and 1 Gbps networks cards. For best performnce I used SSD's Array, but it will work on NAS, Hyper Converged Storeage or Windows Storage Direct.
  
-The Primary server name is: Truro
-The Secondary server name is: Exeter
+Let Us say, Primary server name is: Truro
+and the Secondary server name is: Exeter
 Lets get started…
 Step 1: Build your host servers
 •	Build two physical host servers – they need to be running the same version of Windows Server 2016, 2012 R2, or 2012 (which has less functionality).
@@ -13,7 +13,7 @@ If you are doing this in a clustered environment, you will need to know the repl
  
 Step 2: Download MakeCert
 Download makecert (extract from the full SDK), http://www.microsoft.com/en-us/download/details.aspx?id=8279
-or, download both 32bit and 64bit versions from here (you’ll want 64bit): https://1drv.ms/u/s!AqcygLZtv7MtlbUm6aQj-b460K1ncw
+or, download both 32bit and 64bit versions from here (you’ll want 64bit): https://1drv.ms/f/s!AqQjKR39YBWmoD68gEVRVmtNisE_
 Step 3: Prepare the server directories
 On both servers, make the following file structure:
 C:\makecert
@@ -166,5 +166,5 @@ Right click on the VM – select view replication health
  
 Replication should be normal
  
-They’re you go….Hyper-V replication configured between two workgroup computers.
-
+Congratulations…. You have completed Hyper-V replication configured between two workgroup computers.
+In case of any issue/query please let me know.
