@@ -5,7 +5,7 @@ Let Us say, Primary server name is: Truro
 and the Secondary server name is: Exeter
 Lets get started…
 Step 1: Build your host servers
-•	Build two physical host servers – they need to be running the same version of Windows Server 2016, 2012 R2, or 2012 (which has less functionality).
+•	Build two physical host servers – they need to be running the same version of Windows Server 2019, 2016, 2012 R2, or 2012 (which has less functionality).
 •	Install the Hyper-V role on both.
 •	Make sure both servers are fully patched though Windows update.
 •	See if any of the hyper-v hotfixes apply to your situation
@@ -22,7 +22,7 @@ C:\makecert\import
 Copy makecert.exe to c:\makecert on both servers
  
 Step 4: Making the certificates
-Using an admin command prompt (do not use Powershell on server 2012 R2, or 2012).
+Using an admin command prompt (do not use Powershell on server 2019, 2016, 2012 R2, or 2012).
 Run the following commands on the Primary Server:
 c:\makecert\makecert -pe -n "CN=PrimaryTestRootCA" -ss root -sr LocalMachine -sky signature -r "c:\makecert\PrimaryTestRootCA.cer"
  
